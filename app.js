@@ -1,30 +1,25 @@
-/**
- * Created by hongboing on 10/20/15.
- */
-var demo = new Vue({
-    el: '#demo',
+new Vue({
+    el: '#repeat-object',
     data: {
-        parentMsg: 'Hello',
-        items: [
-            { childMsg: 'Foo' },
-            { childMsg: 'Bar' }
-        ]
+        primitiveValues: {
+            FirstName: 'John',
+            LastName: 'Doe',
+            Age: 30
+        },
+        objectValues: {
+            one: {
+                msg: 'Hello'
+            },
+            two: {
+                msg: 'Bye'
+            }
+        }
     }
 });
 
 new Vue({
-    el: '#tags',
+    el: '#range',
     data: {
-        tags: ['JavaScript', 'MVVM', 'Vue.js']
-    }
-});
-
-new Vue({
-    el: '#users',
-    data: {
-        users: [
-            { name: 'Foo Bar', email: 'foo@bar.com' },
-            { name: 'John Doh', email: 'john@doh.com' }
-        ]
+        val: 3
     }
 });

@@ -5,23 +5,15 @@
     <title></title>
 </head>
 <body>
-<ul id="demo">
-    <li v-repeat="items" class="item-{{$index}}">
-        {{$index}} - {{parentMsg}} {{childMsg}}
-    </li>
+<ul id="repeat-object">
+    <li v-repeat="primitiveValues">{{$key}} : {{$value}}</li>
+    <li>===</li>
+    <li v-repeat="objectValues">{{$key}} : {{msg}}</li>
 </ul>
 
-<ul id="tags">
-    <li v-repeat="tags">
-        {{$value}}
-    </li>
-</ul>
-
-<ul id="users">
-    <li v-repeat="user in users">
-        {{user.name}} - {{user.email}}
-    </li>
-</ul>
+<div id="range">
+    <div v-repeat="val">Hi! {{$index}}</div>
+</div>
 <script src="vue.js"></script>
 <script src="app.js"></script>
 </body>
